@@ -37,7 +37,6 @@ public class SerializerDeserializerTest {
     @Order(1)
     void testSerializeObject() throws Exception
     {
-        //{"objects":[{"class":"org.example.ObjectA","id":"0","type":"object","fields":[{"name":"x","declaring class":"org.example.ObjectA","type":"int","value":"1"},{"name":"y","declaring class":"org.example.ObjectA","type":"double","value":"1.3"},{"name":"a_a","declaring class":"org.example.ObjectA","reference":"null"}]}]}
         JsonObject jsonObj = Serializer.serializeObject(obj);
         jsonStr = jsonObj.toString();
         String expected = "{\"objects\":[{\"class\":\"org.example.Object1\",\"id\":\"0\",\"type\":\"object\",\"fields\":[{\"name\":\"x\",\"declaring class\":\"org.example.Object1\",\"type\":\"int\",\"value\":\"1\"},{\"name\":\"y\",\"declaring class\":\"org.example.Object1\",\"type\":\"double\",\"value\":\"1.3\"},{\"name\":\"z\",\"declaring class\":\"org.example.Object1\",\"reference\":\"null\"}]}]}";
