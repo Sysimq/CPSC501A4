@@ -29,38 +29,47 @@ public class Serializer {
         // Get the object class
         Class object_class = source.getClass();
         JsonObjectBuilder object_info = Json.createObjectBuilder();
+        JsonObjectBuilder array_object = Json.createObjectBuilder();
 
-        object_info.add("class", object_class.getName());
-        object_info.add("id", object_id);
+        if(object_class == null){
+            object_info.add("reference", "null");
+        }
+        if (object_class.isArray()){
+            JsonObjectBuilder array_info = Json.createObjectBuilder();
+            int length = Array.getLength(source);
+            Class componentType = source.getClass().getComponentType();
 
-        JsonArrayBuilder field_list = Json.createArrayBuilder();
-
-        for(Field f: object_class.getDeclaredFields()){
-            f.setAccessible(true);
-
-            JsonObjectBuilder field_info = Json.createObjectBuilder();
-            Class field_DeclaringClass = f.getDeclaringClass();
-            Object fieldObj = f.get(source);
-
-            field_info.add("name", f.getName());
-            field_info.add("declaring class", field_DeclaringClass.getName());
-
-            if(f.getType().isPrimitive()){
-                field_info.add("value",fieldObj.toString());
+            object_info.add("class", object_class.getName());
+            object_info.add("id",object_id);
+            JsonArrayBuilder arraylist = Json.createArrayBuilder();
+            object_info.add("type","array");
+            object_info.add("length",Integer.toString(Array.getLength(source)));
+            for(int i = 0; i < length; i++){
+                String fields = String.valueOf(Array.get(source,i));
+                Object arrayObject = Array.get(source,i);
+                if(arrayObject == null){
+                    array_info.add("reference","null");
+                }
+                else if(!componentType.isPrimitive()){
+                    if(object_tracking_map.containsKey(arrayObject)){
+                        array_info.add("reference", object_tracking_map.get(arrayObject).toString());
+                    }
+                    else{
+                        array_info.add("reference",Integer.toString(object_tracking_map.size()));
+                        serializeHelper(arrayObject, object_list, object_tracking_map);
+                    }
+                }else{
+                    array_info.add("value", arrayObject.toString());
+                }
+                arraylist.add(array_info);
             }
-            // if field is an object
-            else{
-                if(fieldObj == null){
-                    field_info.add("reference", "null");
-                }
-                else if(object_tracking_map.containsKey(fieldObj)){
-                    field_info.add("reference",object_tracking_map.get(fieldObj).toString());
-                }
-                else{
-                    field_info.add("reference", Integer.toString(object_tracking_map.size()));
-                    serializeHelper(fieldObj,object_list,object_tracking_map);
-                }
-            }
+            object_info.add("entries",arraylist);
+
+        }
+
+        else if (source instanceof ArrayList<?>){
+            object_info.add ("class", object_class.getName());
+            object_info.add("id",object_id);
         }
 
 
