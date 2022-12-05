@@ -5,5 +5,5 @@ public class Object1 {
 
     public double y;
 
-    public Object1 obj1;
+    public Object1 z;
 }

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="812dce62-9b8c-41c3-9a6c-b9ac0f33f3a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ObjectCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Object1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Object1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Serializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,33 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.SerializerDeserializerTest.testSerializeObject">
+    <configuration name="SerializerDeserializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CPSC501A4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SerializerDeserializerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SerializerDeserializerTest.testSerializeObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CPSC501A4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SerializerDeserializerTest" />
+      <option name="METHOD_NAME" value="testSerializeObject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SerializerDeserializerTest.testSerializeObject" />
+        <item itemvalue="JUnit.SerializerDeserializerTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -55,7 +84,7 @@
       <workItem from="1670148178480" duration="4577000" />
       <workItem from="1670218379262" duration="736000" />
       <workItem from="1670222445444" duration="1579000" />
-      <workItem from="1670228946512" duration="3356000" />
+      <workItem from="1670228946512" duration="8733000" />
     </task>
     <servers />
   </component>

@@ -29,6 +29,7 @@ public class Serializer {
         // Get the object class
         Class object_class = source.getClass();
         JsonObjectBuilder object_info = Json.createObjectBuilder();
+        JsonArrayBuilder field_list = Json.createArrayBuilder();
         JsonObjectBuilder array_object = Json.createObjectBuilder();
 
         if(object_class == null){
@@ -70,9 +71,85 @@ public class Serializer {
         else if (source instanceof ArrayList<?>){
             object_info.add ("class", object_class.getName());
             object_info.add("id",object_id);
+            object_info.add("type", "object");
+            for (Field f: object_class.getDeclaredFields()){
+                if(!Modifier.isStatic(f.getModifiers())){
+                    f.setAccessible(true);
+
+                    JsonObjectBuilder arraylist_info = Json.createObjectBuilder();
+                    Class field_declaring_class = f.getDeclaringClass();
+                    Object array_field_object = f.get(source);
+
+                    arraylist_info.add("name",f.getName());
+                    arraylist_info.add("declaring class", field_declaring_class.getName());
+
+                    if(field_declaring_class == object_class){
+                        if(array_field_object ==null){
+                            arraylist_info.add("reference","null");
+                        }
+
+                        else if(!f.getType().isPrimitive()){
+                            if(object_tracking_map.containsKey(array_field_object)){
+                                arraylist_info.add("reference",object_tracking_map.get(array_field_object).toString());
+                            }else{
+                                arraylist_info.add("reference", Integer.toString(object_tracking_map.size()));
+                                serializeHelper(array_field_object,object_list,object_tracking_map);
+                            }
+
+                        }else{
+                            arraylist_info.add("type",f.getType().toString());
+                            arraylist_info.add("value",array_field_object.toString());
+                        }
+                    }else{
+                        arraylist_info.add("reference",Integer.toString(object_tracking_map.size()));
+                        serializeHelper(array_field_object,object_list,object_tracking_map);
+                    }
+                    field_list.add(arraylist_info);
+                }
+            }
+            object_info.add("fields",field_list);
+        } else{
+            object_info.add("class",object_class.getName());
+            object_info.add("id",object_id);
+            object_info.add("type","object");
+            for(Field f: object_class.getDeclaredFields()){
+                if(!Modifier.isStatic(f.getModifiers())){
+                    f.setAccessible(true);
+
+                    JsonObjectBuilder arraylist_info = Json.createObjectBuilder();
+                    Class field_declaring_class = f.getDeclaringClass();
+                    Object field_object = f.get(source);
+
+                    arraylist_info.add("name",f.getName());
+                    arraylist_info.add("declaring class", field_declaring_class.getName());
+
+                    if(field_declaring_class == object_class){
+                        if(field_object ==null){
+                            arraylist_info.add("reference","null");
+                        }
+
+                        else if(!f.getType().isPrimitive()){
+                            if(object_tracking_map.containsKey(field_object)){
+                                arraylist_info.add("reference",object_tracking_map.get(field_object).toString());
+                            }else{
+                                arraylist_info.add("reference", Integer.toString(object_tracking_map.size()));
+                                serializeHelper(field_object,object_list,object_tracking_map);
+                            }
+
+                        }else{
+                            arraylist_info.add("type",f.getType().toString());
+                            arraylist_info.add("value",field_object.toString());
+                        }
+                    }else{
+                        arraylist_info.add("reference",Integer.toString(object_tracking_map.size()));
+                        serializeHelper(field_object,object_list,object_tracking_map);
+                    }
+                    field_list.add(arraylist_info);
+                }
+            }
+            object_info.add("fields",field_list);
         }
-
-
+        object_list.add(object_info);
 
 
     }
