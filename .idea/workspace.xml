@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="812dce62-9b8c-41c3-9a6c-b9ac0f33f3a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Object1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Object1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Deserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Deserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Inspector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Inspector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Serializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" afterDir="false" />
     </list>
@@ -35,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.SerializerDeserializerTest.testSerializeObject">
+}</component>
+  <component name="RunManager" selected="JUnit.SerializerDeserializerTest">
     <configuration name="SerializerDeserializerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CPSC501A4" />
       <option name="PACKAGE_NAME" value="" />
@@ -67,8 +67,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SerializerDeserializerTest.testSerializeObject" />
         <item itemvalue="JUnit.SerializerDeserializerTest" />
+        <item itemvalue="JUnit.SerializerDeserializerTest.testSerializeObject" />
       </list>
     </recent_temporary>
   </component>
@@ -85,6 +85,10 @@
       <workItem from="1670218379262" duration="736000" />
       <workItem from="1670222445444" duration="1579000" />
       <workItem from="1670228946512" duration="8952000" />
+      <workItem from="1670238567653" duration="1172000" />
+      <workItem from="1670286493977" duration="8766000" />
+      <workItem from="1670319801770" duration="4341000" />
+      <workItem from="1670359470815" duration="55000" />
     </task>
     <servers />
   </component>

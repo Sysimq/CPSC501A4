@@ -8,7 +8,7 @@ import javax.json.*;
 
 /**
  * Some of the code are taken from Course Website written by Johnathan Hudson
- * https://pages.cpsc.ucalgary.ca/~jwhudson/CPSC501F22/code/Reflection4GeneralPurpose/JSONMain.java
+ * https://pages.cpsc.ucalgary.ca/~jwhudson/CPSC501F22/code/Reflection4GeneralPurpose/JSON/Serializer.java
  * **/
 
 public class Serializer {
@@ -30,7 +30,6 @@ public class Serializer {
         Class object_class = source.getClass();
         JsonObjectBuilder object_info = Json.createObjectBuilder();
         JsonArrayBuilder field_list = Json.createArrayBuilder();
-        JsonObjectBuilder array_object = Json.createObjectBuilder();
 
         if(object_class == null){
             object_info.add("reference", "null");
