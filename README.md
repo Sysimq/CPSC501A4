@@ -8,7 +8,10 @@ Using reflection to serialize an object to JSON and then de-serialize from JSON 
 All source code can be found in `cpsc501a4/src/main/java/org/example` and `SerializedObject.json` file in `cpsc501a4`.\
 Junit test can be found in `cpsc501a4/src/main/java/org/example`.
 
-To run the program you can open the project on IntelliJ. When the project is loaded, you have to run `Server.java` first followed by `Client.java` file. When these two are up and running, the user will be prompted on the Client terminal interface to choose from which objects you would like to create. Please follow given instructions and enter in only valid input to avoid Exceptions.
+To run the program you can open the project on IntelliJ:
+1. When the project is loaded, you have to run `Server.java` first followed by `Client.java` file. \
+2. When these two are up and running, the user will be prompted on the Client terminal interface to choose from which objects you would like to create. Please input value from 1-6\
+3. Please follow given instructions and enter in only valid input to avoid Exceptions thrown.\
 
 
 For VM flag, add following commands to run configuration of both `Server.java` and `Client.java` files:\
