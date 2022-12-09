@@ -24,8 +24,6 @@ public class Inspector {
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth){
         printTab(depth);
-        System.out.println("CLASS");
-        printTab(depth);
         System.out.println(String.format("Class: %s", c.getName()));
 
         inspectFields(c,obj,recursive,depth);
@@ -75,13 +73,11 @@ public class Inspector {
     }
     private void inspectArray(Class c, Object obj, boolean recursive, int depth){
         Class cType = c.getComponentType();
-        printTab(depth);
-
         int array_length = Array.getLength(obj);
         printTab(depth);
         System.out.println(String.format("  Type: array"));
         printTab(depth);
-        System.out.println(String.format("  LengthL %s", Integer.toString(array_length)));
+        System.out.println(String.format("  Length: %s", Integer.toString(array_length)));
 
         if(array_length >  0){
             printTab(depth);

@@ -60,12 +60,12 @@ public class SerializerDeserializerTest {
         ins.inspect(o,true);
         String[] outArr = outputStream.toString().split("\n");
 
-        assertEquals("Class: org.example.Object1", outArr[1].trim());
-        assertEquals("Field: public int org.example.Object1.x", outArr[2].trim());
-        assertEquals("Value: 1", outArr[3].trim());
-        assertEquals("Field: public double org.example.Object1.y", outArr[4].trim());
-        assertEquals("Value: 1.3", outArr[5].trim());
-        assertEquals("Field: public org.example.Object1 org.example.Object1.z", outArr[6].trim());
-        assertEquals("Value: null", outArr[7].trim());
+        assertEquals("Class: org.example.Object1", outArr[0].trim());
+        assertEquals("Field: public int org.example.Object1.x", outArr[1].trim());
+        assertEquals("Value: 1", outArr[2].trim());
+        assertEquals("Field: public double org.example.Object1.y", outArr[3].trim());
+        assertEquals("Value: 1.3", outArr[4].trim());
+        assertEquals("Field: public org.example.Object1 org.example.Object1.z", outArr[5].trim());
+        assertEquals("Value: null", outArr[6].trim());
     }
 }

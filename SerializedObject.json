@@ -1,0 +1,29 @@
+
+{
+    "objects": [
+        {
+            "class": "org.example.Object1",
+            "id": "0",
+            "type": "object",
+            "fields": [
+                {
+                    "name": "x",
+                    "declaring class": "org.example.Object1",
+                    "type": "int",
+                    "value": "1"
+                },
+                {
+                    "name": "y",
+                    "declaring class": "org.example.Object1",
+                    "type": "double",
+                    "value": "2.2"
+                },
+                {
+                    "name": "z",
+                    "declaring class": "org.example.Object1",
+                    "reference": "null"
+                }
+            ]
+        }
+    ]
+}

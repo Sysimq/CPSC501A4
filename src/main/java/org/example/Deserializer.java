@@ -4,10 +4,10 @@ import javax.json.*;
 import java.lang.reflect.*;
 import java.util.*;
 
-/**
- * Some of the code are taken from Course Website written by Johnathan Hudson
- * https://pages.cpsc.ucalgary.ca/~jwhudson/CPSC501F22/code/Reflection4GeneralPurpose/JSON/Deserializer.java
- * **/
+/*
+ Some of the code are taken from Course Website written by Johnathan Hudson
+ https://pages.cpsc.ucalgary.ca/~jwhudson/CPSC501F22/code/Reflection4GeneralPurpose/JSON/Deserializer.java
+ */
 public class Deserializer {
     public static Object deserializeObject(JsonObject json_object) throws Exception {
         JsonArray object_list = json_object.getJsonArray("objects");
