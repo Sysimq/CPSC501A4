@@ -15,54 +15,41 @@ public class ObjectCreator {
         System.out.println(" 6: Exit ");
 
     }
-    public static int getOption(){
+
+    private static Object createObject() {
         Scanner scan = new Scanner(System.in);
-        while(true){
+        while (true) {
             printMenu();
             String input = scan.nextLine();
-            try{
+            try {
+                Object object = null;
                 int option = Integer.parseInt(input);
-                switch(option){
+                switch (option) {
                     case 1:
+                        object = createObject1();
+                        break;
                     case 2:
+                        object = createObject2();
+                        break;
                     case 3:
+                        object = createObject3();
+                        break;
                     case 4:
+                        object = createObject4();
+                        break;
                     case 5:
+                        object = createObject5();
+                        break;
                     case 6:
-                        return option;
-                    default:
-                        System.out.println("Enter a number from 1-6");
+                        System.out.println("Exiting program...");
+                        System.exit(0);
+                        break;
                 }
-
-            }catch (NumberFormatException e){
+                return object;
+            } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number from 1-6");
             }
         }
-    }
-    private static Object createObject(int input){
-        Object object = null;
-        switch (input){
-            case 1:
-                object = createObject1();
-                break;
-            case 2:
-                object = createObject2();
-                break;
-            case 3:
-                object = createObject3();
-                break;
-            case 4:
-                object = createObject4();
-                break;
-            case 5:
-                object = createObject5();
-                break;
-            case 6:
-                System.out.println("Exiting program...");
-                System.exit(0);
-                break;
-        }
-        return object;
     }
 
     private static Object createObject1(){
@@ -177,8 +164,8 @@ public class ObjectCreator {
         return obj5;
     }
 
-    public static Object sendObject(){
-        Object obj = createObject(getOption());
+    public static Object createSerializeObject(){
+        Object obj = createObject();
         return obj;
     }
 

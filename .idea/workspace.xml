@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="812dce62-9b8c-41c3-9a6c-b9ac0f33f3a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/SerializedObject.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Deserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Deserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerializedObject.json" beforeDir="false" afterPath="$PROJECT_DIR$/SerializedObject.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Inspector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Inspector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Object2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Object2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Object5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Object5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ObjectCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ObjectCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Serializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Serializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SerializerDeserializerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +126,7 @@
       <workItem from="1670319801770" duration="4341000" />
       <workItem from="1670359470815" duration="55000" />
       <workItem from="1670551034644" duration="23323000" />
-      <workItem from="1670584005506" duration="347000" />
+      <workItem from="1670584005506" duration="1345000" />
     </task>
     <servers />
   </component>

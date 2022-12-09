@@ -14,7 +14,7 @@ public class Client {
         while(result){
             System.out.println("Create objects to serialize and send them to the server");
             System.out.println("--------------------------------");
-            Object obj = ObjectCreator.sendObject();
+            Object obj = ObjectCreator.createSerializeObject();
             System.out.println("--------------------------------");
             FileWriter fw = new FileWriter(jsonFile);
             fw.write(ObjectCreator.prettyPrintString(obj));

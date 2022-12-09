@@ -92,12 +92,12 @@ public class Inspector {
             }
             else if (cType.isArray()){
                 printTab(depth);
-                System.out.println(String.format("  Value(reference): %s", arrObj.toString()));
+                System.out.println(String.format("   Value(reference): %s", arrObj.toString()));
                 inspectArray(arrObj.getClass(), arrObj, recursive, depth);
             }
             else if (cType.isPrimitive()){
                 printTab(depth);
-                System.out.println(String.format("  Value: %s",arrObj.toString()));
+                System.out.println(String.format("   Value: %s",arrObj.toString()));
             }
             else {
                 printTab(depth);

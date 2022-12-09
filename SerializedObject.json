@@ -3,7 +3,7 @@
     "objects": [
         {
             "class": "org.example.Object1",
-            "id": "0",
+            "id": "3",
             "type": "object",
             "fields": [
                 {
@@ -16,12 +16,80 @@
                     "name": "y",
                     "declaring class": "org.example.Object1",
                     "type": "double",
-                    "value": "2.2"
+                    "value": "23.0"
                 },
                 {
                     "name": "z",
                     "declaring class": "org.example.Object1",
                     "reference": "null"
+                }
+            ]
+        },
+        {
+            "class": "org.example.Object1",
+            "id": "4",
+            "type": "object",
+            "fields": [
+                {
+                    "name": "x",
+                    "declaring class": "org.example.Object1",
+                    "type": "int",
+                    "value": "2"
+                },
+                {
+                    "name": "y",
+                    "declaring class": "org.example.Object1",
+                    "type": "double",
+                    "value": "23.3"
+                },
+                {
+                    "name": "z",
+                    "declaring class": "org.example.Object1",
+                    "reference": "null"
+                }
+            ]
+        },
+        {
+            "class": "[Ljava.lang.Object;",
+            "id": "2",
+            "type": "array",
+            "length": "2",
+            "entries": [
+                {
+                    "reference": "3"
+                },
+                {
+                    "reference": "4"
+                }
+            ]
+        },
+        {
+            "class": "java.util.ArrayList",
+            "id": "1",
+            "type": "object",
+            "fields": [
+                {
+                    "name": "elementData",
+                    "declaring class": "java.util.ArrayList",
+                    "reference": "2"
+                },
+                {
+                    "name": "size",
+                    "declaring class": "java.util.ArrayList",
+                    "type": "int",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "class": "org.example.Object5",
+            "id": "0",
+            "type": "object",
+            "fields": [
+                {
+                    "name": "a",
+                    "declaring class": "org.example.Object5",
+                    "reference": "1"
                 }
             ]
         }
