@@ -6,7 +6,7 @@ Using reflection to serialize an object to JSON and then de-serialize from JSON 
 ## Getting started
 
 All source code can be found in `cpsc501a4/src/main/java/org/example` and `SerializedObject.json` file in `cpsc501a4`.\
-Junit test can be found in `cpsc501a4/src/main/java/org/example`.
+Junit test can be found in `cpsc501a4/src/test/java/SerializerDeserializerTest.java`.
 
 To run the program you can open the project on IntelliJ:
 1. Load the project with IntelliJ and be sure to include pom.xml file. 
